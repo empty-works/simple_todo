@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from activities.views import thingsToDo
+from . import views
+
+app_name = "activities"
 
 urlpatterns = [
-        path('thingstodo/', thingsToDo)
+        path('', views.thingsToDo, name='activities')
         ]
