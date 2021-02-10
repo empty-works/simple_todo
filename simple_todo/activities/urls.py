@@ -5,5 +5,6 @@ from . import views
 app_name = "activities"
 
 urlpatterns = [
-        path('', views.thingsToDo, name='activities')
+        path('', views.thingsToDo, name='activities'),
+        path('addActivitiesItem/', views.addActivitiesItem)
         ]
