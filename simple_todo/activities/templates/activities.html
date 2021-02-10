@@ -7,6 +7,10 @@
     </head>
     <body>
         <h1>This is the simple todo list</h1>     
+        
+        <form action="/addToDoItem/" method="post">{% csrf_token %} 
+            <input type="text" name="content">
+            <input type="submit" value="Add ToDo Item">
         <ul>
             {% for i in all_items %}
                 <li>{{i.content}}</li>
