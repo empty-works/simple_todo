@@ -8,6 +8,11 @@ def addActivitiesItem(request):
     new_item.save()
     return HttpResponseRedirect('/')
 
+def deleteActivitiesItem(request, i):
+    y = ActivitiesItem.objects.get(id=i) 
+    y.delete()
+    return HttpResponseRedirect('/')
+
 def thingsToDo(request):
     all_activities_items = ActivitiesItem.objects.all()
     return render(request, 'activities.html', {'all_items':all_activities_items})
