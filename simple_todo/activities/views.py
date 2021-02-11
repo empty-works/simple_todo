@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 
 def addActivitiesItem(request):
     x = request.POST['content']
-    new_item = ActivitiesItem(content = x)
+    new_item = ActivitiesItem(content=x)
     new_item.save()
     return HttpResponseRedirect('/')
 
