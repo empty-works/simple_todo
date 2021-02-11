@@ -7,4 +7,5 @@ app_name = "activities"
 urlpatterns = [
         path('', views.thingsToDo, name='thingsToDo'),
         path('addActivitiesItem/', views.addActivitiesItem, name='addActivitiesItem'),
+        path('deleteActivitiesItem', views.deleteActivitiesItem, name = 'deleteActivitiesItem'),
         ]
