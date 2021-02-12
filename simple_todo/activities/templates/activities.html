@@ -5,11 +5,10 @@
         <meta charset="utf-8">
         <title>The Simple To Do List</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
     </head>
     <body>
         <div class="container">
-        <h1>This is the simple todo list</h1>     
+        <h1>This is a simple todo list</h1>     
         
         <form action="/addActivitiesItem/" method="post">{% csrf_token %} 
             <div class="input-group mb-3">
@@ -23,7 +22,7 @@
                 <li>
                     {{i.content}}
                     <form action="/deleteActivitiesItem/{{i.id}}/" method="post">{% csrf_token %}
-                        <input type="submit" value="Delete">
+                        <input class="btn btn-danger btn-small" type="submit" value="Delete">
                     </form>
                 </li>
             {% endfor %}
