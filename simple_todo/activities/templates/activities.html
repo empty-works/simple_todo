@@ -19,11 +19,13 @@
         
         <ul>
             {% for i in all_items %}
-                <li>
-                    {{i.content}}
+                <li class="row">
+                    <div class="col-10">{{i.content}}</div>
+                    <div class="col-2">
                     <form action="/deleteActivitiesItem/{{i.id}}/" method="post">{% csrf_token %}
-                        <input class="btn btn-danger btn-small" type="submit" value="Delete">
+                        <input class="btn btn-danger btn-small float-right" type="submit" value="Delete">
                     </form>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
