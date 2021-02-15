@@ -19,7 +19,7 @@
         
         <ul>
             {% for i in all_items %}
-                <li class="row">
+                <li class="row mt-2">
                     <div class="col-10">{{i.content}}</div>
                     <div class="col-2">
                     <form action="/deleteActivitiesItem/{{i.id}}/" method="post">{% csrf_token %}
