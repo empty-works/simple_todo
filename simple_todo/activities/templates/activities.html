@@ -5,15 +5,15 @@
     <head>
         <meta charset="utf-8">
         <title>The Simple To Do List</title>
-        <link ref="stylesheet" href="{% static "css/activities.css" %}"/>
+        <link rel="stylesheet" href="{% static "css/activities.css" %}"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
     <body>
         <div class="container">
         <h1>This is a simple todo list</h1>     
         
-        <form action="/addActivitiesItem/" method="post">{% csrf_token %} 
-            <div id="activity-bar" class="input-group mb-3">
+        <form id="activity-bar" action="/addActivitiesItem/" method="post">{% csrf_token %} 
+            <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Add an activity!" aria-label="Recipient's username" aria-describedby="button-addon2" name="content">
                 <input class="btn btn-outline-secondary" type="submit" value="Add Activities Item">
             </div>
